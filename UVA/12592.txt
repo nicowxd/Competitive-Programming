@@ -1,0 +1,11 @@
+TÓPICO: Map
+
+QUESTÃO: 
+	Serão dados N pares de strings s1 e s2. Para cada Q query seguinte, será dada a string s1 e você deve imprimir a string s2 correspondente.
+
+SOLUÇÃO:
+	Aplicação direta de Map. Basta armazenar a string s1 como sendo a chave e a s2 como sendo o valor. Depois basta printar para cada query, o valor
+	salvo no Map.
+
+COMPLEXIDADE: 
+	O((N+Q)*log(N))
