@@ -32,7 +32,7 @@ long long process (int number)
 	
 	while(number)
 	{
-		v.push_back(number%10);
+		v.emplace_back(number%10);
 		number/=10;
 	}
 	
