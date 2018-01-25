@@ -4,8 +4,7 @@ QUESTÃO:
 	Dada uma resposta na forma < variavel >  = < valor > , imprima a equação mais simplista que pode ser gerada dada essa resposta.
 
 SOLUÇÃO:
-	Fica bem evidente, tanto pelos exemplos de casos de teste que a equação mais simplista a ser criada é exatamente aquela fornecida. Nesse caso,
-	só basta imprimir o que for dado na entrada.
+	Fica bem evidente, tanto pelos exemplos de casos de teste que a equação mais simplista a ser criada é exatamente aquela fornecida. Nesse caso, só basta imprimir o que for dado na entrada.
 
 COMPLEXIDADE:
 	O(1)
