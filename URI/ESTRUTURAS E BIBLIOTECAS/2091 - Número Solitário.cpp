@@ -20,7 +20,7 @@ int main()
 
         for (auto x : m)
             if (x.second&1)
-                cout << x.first << endl;
+                printf("%lld\n", x.first);
     }
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
