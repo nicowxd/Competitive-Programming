@@ -36,7 +36,7 @@ int main()
             else if (biggest - nw > ans)
                 ans = biggest - nw;
         }
-        printf("%.5lf\n", ans);
+        printf("%.6lf\n", ans);
     }
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
