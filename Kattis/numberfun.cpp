@@ -16,7 +16,20 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
+	int n;
+	cin >> n;
 	
+	while(n--) {
+		int a, b, c;
+		cin >> a >> b >> c;
+
+		if (b > a) swap(a, b);
+
+		if (a + b == c || a - b == c || a * b == c || (a / b == c && a % b == 0))
+			cout << "Possible\n";
+		else
+			cout << "Impossible\n";
+	}
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

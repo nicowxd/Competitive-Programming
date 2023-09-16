@@ -16,7 +16,27 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
+	int n;
+	cin >> n;
 	
+	while(n--) {
+		
+		int last;
+		bool escala = true;
+		for (int i = 0; i < 5; i++) {
+			
+			int next;
+			cin >> next;
+
+			if (i != 0) {
+				if (next - last != 1)
+					escala = false;
+			}
+			last = next;
+		}
+
+		cout << (escala ? "Y\n" : "N\n");
+	}
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

@@ -16,7 +16,21 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	
+	int n;
+	cin >> n;
+
+	int mn = INF, ans;
+	for (int i = 0; i < n; i++) {
+		int x;
+		cin >> x;
+
+		if (x < mn) {
+			ans = i;
+			mn = x;
+		}
+	}
+
+	cout << ans << '\n';
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

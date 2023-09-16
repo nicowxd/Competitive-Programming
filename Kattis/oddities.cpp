@@ -16,7 +16,17 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	
+	int n;
+	cin >> n;
+	while(n--) {
+		int x;
+		cin >> x;
+
+		if (x&1)
+			cout << x << " is odd\n";
+		else
+			cout << x << " is even\n";
+	}
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

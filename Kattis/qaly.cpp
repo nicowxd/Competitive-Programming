@@ -16,7 +16,20 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
+	int n;
+	cin >> n;
 	
+	double ans = 0.0;
+	while(n--) {
+		double a, b;
+		cin >> a >> b;
+		ans += a * b;
+	}
+	
+	cout << setprecision(3) << fixed;
+	cout << ans << '\n';
+
+		
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

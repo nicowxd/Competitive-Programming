@@ -16,7 +16,9 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	
+	string s;
+	cin >> s;
+	cout << (int) s.size() << '\n';
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

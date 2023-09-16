@@ -16,7 +16,21 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
+	int n;
+	cin >> n;
 	
+	bool sense = true;
+	for (int i = 1; i <= n; i++) {
+		string s;
+		cin >> s;
+
+		if (s != "mumble") {
+			int j = stoi(s);
+			if (j != i) 
+				sense = false;
+		}
+	}
+	cout << (sense ? "makes sense\n" : "something is fishy\n");
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

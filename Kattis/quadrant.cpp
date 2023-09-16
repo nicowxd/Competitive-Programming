@@ -16,7 +16,17 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	
+	int x, y;
+	cin >> x >> y;
+
+	if (x > 0 && y > 0)
+		cout << "1\n";
+	else if (x > 0 && y < 0)
+		cout << "4\n";
+	else if (x < 0 && y > 0)
+		cout << "2\n";
+	else
+		cout << "3\n";
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

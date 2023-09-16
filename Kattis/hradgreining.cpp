@@ -16,7 +16,15 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	
+	string s;
+	cin >> s;
+
+	size_t found = s.find("COV");
+
+	if (found != string::npos)
+		cout << "Veikur!\n";
+	else 
+		cout << "Ekki veikur!\n";
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

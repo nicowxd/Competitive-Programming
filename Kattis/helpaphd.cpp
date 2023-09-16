@@ -16,7 +16,25 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
+	int n;
+	cin >> n;
 	
+	while(n--) {
+		string s;
+		int a, b;
+		char c;
+	
+		cin >> s;
+
+		if (s[1] == '=') {
+			cout << "skipped\n";
+		}
+		else {
+			stringstream ss(s);
+			ss >> a >> c >> b;
+			cout << a + b << '\n';
+		}
+	}
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

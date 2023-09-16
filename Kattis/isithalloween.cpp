@@ -16,7 +16,13 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	
+	string s;
+	getline(cin, s);
+
+	if (s == "OCT 31" || s == "DEC 25")
+		cout << "yup\n";
+	else
+		cout << "nope\n";
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

@@ -16,7 +16,25 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	
+	int s, c = 1;
+	cin >> s;
+
+	while(s--) {
+		
+		bool allSolved = true;
+		for (int i = 0; i < 13; i++) {
+			int x;
+			cin >> x;
+
+			if (x == 0)
+				allSolved = false;
+		}
+		cout << "Set #" << c++ << ": ";
+		if (allSolved)
+			cout << "Yes\n";
+		else
+			cout << "No\n";
+	}
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

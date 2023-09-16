@@ -16,8 +16,21 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	
-
+	int n;
+	while(cin >> n && n != -1) {
+		
+		int ans = 0, lastT = 0;
+		for (int i = 0; i < n; i++) {
+			int s, t;
+			cin >> s >> t;
+			
+			ans = ans + (s * (t-lastT));
+			lastT = t;
+		}
+		
+		cout << ans << " miles\n";
+	}
+			
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
 }

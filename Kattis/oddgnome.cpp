@@ -16,7 +16,24 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	
+	int n;
+	cin >> n;
+
+	while(n--) {
+		int g, previous, ans = 0;
+		cin >> g >> previous;
+		
+		for (int i = 2; i <= g; i++) {
+			int next;
+			cin >> next;
+			
+			if (next - previous != 1 && ans == 0)
+				ans = i;
+			previous = next;
+		}
+
+		cout << ans << '\n';
+	}
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;

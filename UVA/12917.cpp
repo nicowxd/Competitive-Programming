@@ -16,7 +16,15 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
+	int p, h, o;
 	
+	while(cin >> p >> h >> o) {
+		
+		if (o - p >= h)
+			cout << "Props win!\n";
+		else
+			cout << "Hunters win!\n";
+	}
 
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
