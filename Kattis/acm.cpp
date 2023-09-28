@@ -16,19 +16,28 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
+	int m, ans = 0, penalties = 0;
+	int sub[27] = {0};
+	bool solved[27] = {0};
+	char c; 
 	string s;
-	cin >> s;
 	
-	bool hiss = false;
-	for (int i = 1; i < (int) s.size() && !hiss; i++) {
-		if (s[i-1] == 's' && s[i] == 's')
-			hiss = true;
+	while(cin >> m && m != -1) {
+		
+		getchar();
+		cin >> c >> s;
+		
+		if (s == "right" && !solved[c - 'A']) {
+			solved[c - 'A'] = true;
+			penalties = penalties + m + sub[c - 'A'];
+			ans++;
+		}
+		else
+			sub[c - 'A'] += 20;
 	}
 
-	if (hiss)
-		cout << "hiss\n";
-	else
-		cout << "no hiss\n";
+	cout << ans << " " << penalties << "\n";
+
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
 }

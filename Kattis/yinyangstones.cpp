@@ -18,17 +18,21 @@ int main()
 
 	string s;
 	cin >> s;
-	
-	bool hiss = false;
-	for (int i = 1; i < (int) s.size() && !hiss; i++) {
-		if (s[i-1] == 's' && s[i] == 's')
-			hiss = true;
+
+	int cnt_w = 0, cnt_b = 0;
+
+	for (int i = 0; i < (int) s.size(); i++) {
+		if (s[i] == 'W')
+			cnt_w++;
+		else
+			cnt_b++;
 	}
 
-	if (hiss)
-		cout << "hiss\n";
+	if (cnt_w == cnt_b)
+		cout << "1\n";
 	else
-		cout << "no hiss\n";
+		cout << "0\n";
+
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
 }

@@ -16,19 +16,19 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	string s;
-	cin >> s;
-	
-	bool hiss = false;
-	for (int i = 1; i < (int) s.size() && !hiss; i++) {
-		if (s[i-1] == 's' && s[i] == 's')
-			hiss = true;
+	int n, x, order[110];
+	cin >> n;
+
+	for (int i = 1; i <= n - 1; i++) {
+		cin >> x;
+		order[x+1] = i + 1;
 	}
 
-	if (hiss)
-		cout << "hiss\n";
-	else
-		cout << "no hiss\n";
+	cout << "1 ";
+	for (int i = 1; i <= n - 1; i++) 
+		cout << order[i] << " ";
+	cout << "\n";
+
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
 }

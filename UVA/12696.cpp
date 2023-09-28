@@ -10,25 +10,34 @@ typedef vector<vii> AdjList;
 const int INF = 1e9 + 10;
 const int MOD = 1e9 + 7;
 const int MAXN = 1e5 + 10;
+const double eps = 1e-3;
 
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	string s;
-	cin >> s;
+	int n, ans = 0;
+	cin >> n;
 	
-	bool hiss = false;
-	for (int i = 1; i < (int) s.size() && !hiss; i++) {
-		if (s[i-1] == 's' && s[i] == 's')
-			hiss = true;
-	}
+	while(n--) {
+		double l, w, d, weight;
+		cin >> l >> w >> d >> weight;
 
-	if (hiss)
-		cout << "hiss\n";
-	else
-		cout << "no hiss\n";
+		if (weight - 7.00 < eps) {
+			double sum = l + w + d;
+			if (sum - 125.00 < eps || (l - 56 < eps && w - 45 < eps && d - 25 < eps)) {
+				cout << "1\n";
+				ans++;
+			}
+			else
+				cout << "0\n";
+		}
+		else
+			cout << "0\n";
+
+	}
+	cout << ans << "\n";
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
 }

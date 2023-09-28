@@ -16,19 +16,34 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	string s;
-	cin >> s;
-	
-	bool hiss = false;
-	for (int i = 1; i < (int) s.size() && !hiss; i++) {
-		if (s[i-1] == 's' && s[i] == 's')
-			hiss = true;
+	int t;
+	cin >> t;
+
+	while(t--) {
+
+		int ng, nm;
+		cin >> ng >> nm;
+		
+		int maxG = 0, maxM = 0;
+		
+		for (int i = 0; i < ng; i++) {
+			int g;
+			cin >> g;
+			maxG = max(g, maxG);
+		}	
+
+		for (int i = 0; i < nm; i++) {
+			int m;
+			cin >> m;
+			maxM = max(m, maxM);
+		}
+
+		if (maxM <= maxG)
+			cout << "Godzilla\n";
+		else
+			cout << "MechaGodzilla\n";
 	}
 
-	if (hiss)
-		cout << "hiss\n";
-	else
-		cout << "no hiss\n";
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
 }

@@ -18,17 +18,24 @@ int main()
 
 	string s;
 	cin >> s;
-	
-	bool hiss = false;
-	for (int i = 1; i < (int) s.size() && !hiss; i++) {
-		if (s[i-1] == 's' && s[i] == 's')
-			hiss = true;
+
+	int cnt_t = 0, cnt_c = 0, cnt_g = 0;
+
+	for (int i = 0; i < (int) s.size(); i++) {
+		if (s[i] == 'T')
+			cnt_t++;
+		else if (s[i] == 'C')
+			cnt_c++;
+		else
+			cnt_g++;
 	}
 
-	if (hiss)
-		cout << "hiss\n";
-	else
-		cout << "no hiss\n";
+	int ans = cnt_t*cnt_t + cnt_c*cnt_c + cnt_g*cnt_g;
+	int bonus = min(cnt_t, min(cnt_c, cnt_g));
+	ans += 7 * bonus;
+
+	cout << ans << '\n';
+
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
 }

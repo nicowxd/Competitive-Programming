@@ -17,18 +17,20 @@ int main()
     cin.tie(0);
 
 	string s;
-	cin >> s;
-	
-	bool hiss = false;
-	for (int i = 1; i < (int) s.size() && !hiss; i++) {
-		if (s[i-1] == 's' && s[i] == 's')
-			hiss = true;
+	map<char, int> mp;
+
+	for (int i = 0; i < 5; i++) {
+		cin >> s;
+		mp[s[0]]++;
 	}
 
-	if (hiss)
-		cout << "hiss\n";
-	else
-		cout << "no hiss\n";
+	int mx = 0;
+	for (auto &x : mp) {
+		if (x.second > mx)
+			mx = x.second;
+	}
+
+	cout << mx << '\n';
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
 }

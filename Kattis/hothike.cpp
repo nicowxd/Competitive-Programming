@@ -16,19 +16,24 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
 
-	string s;
-	cin >> s;
+	int n;
+	cin >> n;
 	
-	bool hiss = false;
-	for (int i = 1; i < (int) s.size() && !hiss; i++) {
-		if (s[i-1] == 's' && s[i] == 's')
-			hiss = true;
+	int t[55];
+	
+	for (int i = 0; i < n; i++)
+		cin >> t[i];
+	
+	int ans = 0, mn = INF;
+	for (int i = 2; i < n; i++) {
+		int maxTemp = max(t[i-2], t[i]);
+		if (maxTemp < mn) {
+			mn = maxTemp;
+			ans = i-1;
+		}
 	}
 
-	if (hiss)
-		cout << "hiss\n";
-	else
-		cout << "no hiss\n";
+	cout << ans << " " << mn << '\n';
     cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
     return 0;
 }
